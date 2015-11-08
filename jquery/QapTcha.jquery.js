@@ -17,7 +17,8 @@ jQuery.QapTcha = {
 			disabledSubmit : true,
 			autoRevert : true,
 			PHPfile : 'php/Qaptcha.jquery.php',
-			autoSubmit : false
+			autoSubmit : false,
+			chars: 'azertyupqsdfghjkmwxcvbn23456789AZERTYUPQSDFGHJKMWXCVBN_-#@'
         };
 
 		if(this.length>0)
@@ -59,7 +60,7 @@ jQuery.QapTcha = {
 					{
 						// set the SESSION iQaptcha in PHP file
 						$.post(opts.PHPfile,{
-							action : 'qaptcha',
+							action : $('#token').attr('content'),
 							qaptcha_key : inputQapTcha.attr('name')
 						},
 						function(data) {
@@ -68,8 +69,8 @@ jQuery.QapTcha = {
 								Slider.draggable('disable').css('cursor','default');
 								inputQapTcha.val('');
 								TxtStatus.text(opts.txtUnlock).addClass('dropSuccess').removeClass('dropError');
-								form.find('input[type=\'submit\']').prop('disabled', false);
-								if(opts.autoSubmit) form.find('input[type=\'submit\']').trigger('click');
+								form.find('[type=\'submit\']').prop('disabled', false);
+								if(opts.autoSubmit) form.find('[type=\'submit\']').trigger('click');
 							}
 						},'json');
 					}
@@ -77,7 +78,7 @@ jQuery.QapTcha = {
 			});
 
 			function generatePass(nb) {
-		        var chars = 'azertyupqsdfghjkmwxcvbn23456789AZERTYUPQSDFGHJKMWXCVBN_-#@';
+		        var chars = opts.chars;
 		        var pass = '';
 		        for(i=0;i<nb;i++){
 		            var wpos = Math.round(Math.random()*chars.length);
