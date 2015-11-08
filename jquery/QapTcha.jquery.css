@@ -1,0 +1,72 @@
+/*****************/
+/** QapTcha CSS **/
+/*****************/
+.QapTcha {
+    float: left;
+    width: 252px;
+}
+
+.QapTcha .clr {
+    clear: both;
+}
+
+.QapTcha .bgSlider {
+    width: 252px;
+    height: 37px;
+    float: left;
+    border: 2px solid #aaa;
+    background-color: #fff;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -ms-border-radius: 7px;
+}
+
+.QapTcha .Slider {
+    width: 52px;
+    height: 33px;
+    border: none;
+    cursor: e-resize;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 30px;
+    background: #eee; /* Old browsers */
+    background: -moz-linear-gradient(top, #eee 0%, #ddd 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eee), color-stop(100%, #ddd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eee 0%, #ddd 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eee 0%, #ddd 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #eee 0%, #ddd 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #eee 0%, #ddd 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eee', endColorstr='#ddd', GradientType=0); /* IE6-9 */
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+}
+
+.QapTcha .Slider:before {
+    content: '->';
+    box-sizing: border-box;
+}
+
+.QapTcha .TxtStatus {
+    width: 252px;
+    margin-top: 7px;
+    text-align: left;
+    color: #bb2828;
+    font-family: Verdana;
+    font-size: 10px;
+    clear: both
+}
+
+.QapTcha .dropSuccess {
+    color: #4e8b37
+}
+
+.QapTcha .dropError {
+    color: #bb2828
+}
